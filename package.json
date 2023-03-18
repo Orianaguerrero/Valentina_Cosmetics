@@ -2,9 +2,10 @@
   "name": "valentina_cosmetics",
   "version": "1.0.0",
   "description": "La audiencia objetivo de este sitio web es mujeres de cualquier edad, con interés en productos de maquillaje y el área de la belleza.\r ### Integrantes del grupo: \r #### ___Oriana Guerrero:___\r Soy una chica de 21 Años, divertida, disciplinada, algo que me gusta de mi es que cumplo  con cada objetivo que me propongo, en esta oportunidad mi objetivo es completar este curso de programación web full stack, y ser una de las mejores programadoras.\r #### ___Felipe Mendez:___\r I am a Junior Developer eager to bring my passion for technology and commitment to continuous learning to a dynamic team.\r ### Inspiracion en referentes del mercado:",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "test": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Orianaguerrero/Valentina_Cosmetics/issues"
   },
-  "homepage": "https://github.com/Orianaguerrero/Valentina_Cosmetics#readme"
+  "homepage": "https://github.com/Orianaguerrero/Valentina_Cosmetics#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

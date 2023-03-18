@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+/*-------------------HEADER---------------*/
+header{
+    background-color: #9a0526;
+}
+.logo{
+    width: 200px;
+}
+/*-------------------/HEADER---------------*/
