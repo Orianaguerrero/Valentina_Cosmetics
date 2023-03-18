@@ -24,13 +24,13 @@ https://www.figma.com/file/MVaCgycdDdQFZXCV3udwyB/Valentina_Cosmetics?node-id=0%
 
 ## Diseño 
 #### Homepage: 
-![HomePage](./Wireframe/Home.jpg)
+![HomePage](./Wireframe/home.jpg)
 
 #### Article: 
-![Article](./wireframe/Detalle_del_producto.jpg)
+![Article](./Wireframe/detalle_del_producto.jpg)
 
 #### Carrito:
- ![Carrito](./Wireframe/carrito.jps)
+ ![Carrito](./Wireframe/carrito.jpg)
 
  #### Login:
  ![Login](./Wireframe/login.jpg)
