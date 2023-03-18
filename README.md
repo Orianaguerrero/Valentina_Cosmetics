@@ -6,7 +6,7 @@ La audiencia objetivo de este sitio web es mujeres de cualquier edad, con inter�
 #### ___Oriana Guerrero:___
 Soy una chica de 21 Años, divertida, disciplinada, algo que me gusta de mi es que cumplo  con cada objetivo que me propongo, en esta oportunidad mi objetivo es completar este curso de programación web full stack, y ser una de las mejores programadoras.
 #### ___Felipe Mendez:___
--Estudiante es proceso de profesionalización, 19 años, apasionado por la programación web full stack, especialmente en el backend.
+I am a Junior Developer eager to bring my passion for technology and commitment to continuous learning to a dynamic team.
 ### Inspiracion en referentes del mercado:
 
 Los sitios con los que nos hemos referenciado para realizar este proyecto son:
@@ -23,19 +23,19 @@ El diseño preliminar se ha realizado con *Figma* y se puede encontrar en la sig
 https://www.figma.com/file/MVaCgycdDdQFZXCV3udwyB/Valentina_Cosmetics?node-id=0%3A1&t=85XegRpQyrIhGyPQ-0
 
 ## Diseño 
-#### Homepage: 
+#### Página de inicio: 
 ![HomePage](./Wireframe/home.jpg)
 
-#### Article: 
+#### Detalle de articulo: 
 ![Article](./Wireframe/detalle_del_producto.jpg)
 
-#### Carrito:
+#### Carrito de compras:
  ![Carrito](./Wireframe/carrito.jpg)
 
- #### Login:
+ #### Inicio de sesión:
  ![Login](./Wireframe/login.jpg)
 
- #### Register:
+ #### Registro:
  ![Register](./Wireframe/register.jpg)
  ### Para clonar el repositorio usar:
 

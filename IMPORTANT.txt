@@ -1,0 +1,4 @@
+Before start to code...
+1. git config user.name ""
+2. git config user.email ""
+3. gh auth login
