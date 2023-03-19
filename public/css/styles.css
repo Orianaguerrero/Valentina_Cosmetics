@@ -2,12 +2,172 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: 'Roboto', 'Sans serif';
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fffafa;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
 }
 /*-------------------HEADER---------------*/
 header{
     background-color: #9a0526;
+    height: 120px;
+    margin-bottom: 20px;
+}
+.logo-session{
+    display:flex;
+    justify-content: space-between;
+}
+.burguer-menu{
+    color: white;
+    font-size: 24px;
+    margin-right: 15px;
+    margin-top: 12px
 }
 .logo{
-    width: 200px;
+    width: 120px;
+    margin: auto;
+    margin-top: 10px; 
+}
+.search{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    margin-top: 10px;
+    position: relative;
+    max-width: 200px;
+}
+.input-search{
+    height: 30px;
+}
+input{
+    font-size: 18px;
+    border: solid 1px #666;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.search-button{
+    border: solid 1px white;
+    background-color: white;
+    position: absolute;
+    right: 0.1%;
+    top: 15%
+}
+.fa-magnifying-glass{
+    color:#9a0526;
+}
+.session-bar{
+    display: none;
+}
+.page{
+    display: none;
 }
 /*-------------------/HEADER---------------*/
+
+/*-------------------MAIN---------------*/
+main{
+    width: 70%;
+    margin:auto;
+    margin-top: 20px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-form{
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.login-title{
+    color: #cb7169;
+    margin: 10px 0px;
+}
+.login-input{
+    margin: 15px 0px;
+    width: 260px;
+    align-self: center;
+    height: 35px;
+    border: solid 2px #cb7169;
+}
+.login-button{
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    align-self: center;
+    color: white;
+    background-color: #cb7169;
+    border: none;
+}
+.remember-me{
+    width: 260px;
+    display: flex;
+    margin-bottom: 10px;
+    align-self: center;
+}
+.login-info{
+    margin: 10px 0px;
+}
+/*-------------------/MAIN---------------*/
+
+/*-------------------FOOTER---------------*/
+footer{
+    background-color: #9a0526;
+    height: 80px;
+    color: white;
+}
+.footer-bar{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+/*-------------------FOOTER---------------*/
+@media(min-width: 500px){
+    .burguer-menu{
+        display:none;
+    }
+    .session-bar{
+        display: flex;
+    }
+    .page{
+        display: flex;
+        width: 55%;
+    }
+    .page li{
+        margin: auto;
+    }
+    .nav-bar{
+        color: white;
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+    }
+    .session-bar{
+        color: white;
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        margin: 20px;
+        margin-bottom: 0px;
+    }
+    .logo{
+        margin-left: 20px;
+    }
+}
+@media(min-width: 1000px) {
+    
+}

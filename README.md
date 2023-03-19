@@ -24,19 +24,19 @@ https://www.figma.com/file/MVaCgycdDdQFZXCV3udwyB/Valentina_Cosmetics?node-id=0%
 
 ## Diseño 
 #### Página de inicio: 
-![HomePage](./wireframe/home.jpg)
+![HomePage](./Wireframe/home.jpg)
 
 #### Detalle de articulo: 
-![Article](./wireframe/product-detail.jpg)
+![Article](./Wireframe/product-detail.jpg)
 
 #### Carrito de compras:
- ![Carrito](./wireframe/cart.jpg)
+ ![Carrito](./Wireframe/cart.jpg)
 
  #### Inicio de sesión:
- ![Login](./wireframe/login.jpg)
+ ![Login](./Wireframe/login.jpg)
 
  #### Registro:
- ![Register](./wireframe/register.jpg)
+ ![Register](./Wireframe/register.jpg)
  ### Para clonar el repositorio usar:
 
 `git clone https://github.com/Orianaguerrero/Valentina_Cosmetics.git `

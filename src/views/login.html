@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./css/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       rel="stylesheet"
@@ -13,24 +14,51 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="./images/naruto.jpg" alt="naruto" />
-      <ul class="session-bar">
-        <li>Iniciar sesión</li>
-        <li>Registrarse</li>
-      </ul>
-      <div class="search">
-        <input type="text" placeholder="Buscar..." />
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div class="logo-session">
+        <img class="logo" src="./images/logo.png" alt="logo" />
+        <a class="burguer-menu" href="#"
+            ><em class="fa-solid fa-bars burguer-menu"></em
+          ></a>
+        <ul class="session-bar">
+          <li><a href="">Iniciar sesión</a></li>
+          <li><a href="">Registrarse</a></li>
+        </ul>
       </div>
-      <ul class="nav-bar">
-        <li>Inicio</li>
-        <li>Categorias</li>
-        <li>Más vendidos</li>
-        <li>Ofertas</li>
-      </ul>
-
+      <div class="nav-bar">
+        <ul class="page">
+          <li><a href="">Inicio</a></li>
+          <li><a href="">Categorias</a></li>
+          <li><a href="">Más vendidos</a></li>
+          <li><a href="">Ofertas</a></li>
+        </ul>
+        <div class="search">
+          <input class="input-search" type="text" placeholder="Buscar..." />
+          <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <h2 class="login-title">Iniciar sesión</h2>
+      <form class="login-form" action="">
+          <input class="login-input" type="text" name="email" id="email" placeholder="Direccion de correo electronico">
+          <input class="login-input" type="password" name="password" id="password" placeholder="Contraseña">
+          <div class="remember-me">
+            <input type="checkbox" name="remember-me" id="remember-me">
+            <label for="remember-me">Recuerdame</label>
+          </div>
+        </div>
+        <button class="login-button" type="submit">INICIAR SESION</button>
+        <a class="login-info" href="#" style="color:black">Has olvidado tu contraseña</a>
+        <a class="login-info" href="#" style="color: #cb7169">Registrarse</a>
+      </form>
+
+    </main>
+    <footer>
+      <ul class="footer-bar">
+        <li>Redes sociales</li>
+        <li>Métodos de pago</li>
+      </ul>
+      <p style="text-align: center; margin-top: 10px;">2023 - Valentina Cosmetics</p>
+    </footer>
   </body>
 </html>
