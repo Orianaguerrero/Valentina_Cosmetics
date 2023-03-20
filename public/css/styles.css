@@ -156,12 +156,44 @@ h2{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 5px;
 }
-
-
-
-
-
 /*-------------------/MAIN HOME---------------*/
+
+/*-------------------MAIN PRODUCT DETAIL---------------*/
+.banner-detail{
+    border-radius: 10px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+.img-detail{
+  
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-radius: 5px;
+    width: 50%;
+    align-self: center;
+}
+.p-detail{
+    margin: 20px;
+    text-align: justify;
+}
+.product-detail{
+    text-align: center;
+    margin: 10px;
+}
+.product-addcar{
+    background-color: #9a0526;
+    color: white;
+    width: 150px;
+    margin: auto;
+    padding: 5px 0px;
+    border-radius: 5px;
+    border: none;
+}
+.price-detail{
+    color: #cb7169;
+}
+/*-------------------/MAIN PRODUCT DETAIL---------------*/
 
 /*-------------------FOOTER---------------*/
 footer{
@@ -174,7 +206,7 @@ footer{
     display: flex;
     justify-content: space-around;
 }
-/*-------------------FOOTER---------------*/
+--------FOOTER---------------*/
 @media(min-width: 500px){
     .burguer-menu{
         display:none;
