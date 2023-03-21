@@ -78,7 +78,6 @@ input{
 main{
     width: 70%;
     margin:auto;
-    margin-top: 20px;
     text-align: center;
     display:flex;
     flex-direction: column;
@@ -133,7 +132,14 @@ main{
 
 }
 .home-button{
-    color: black;
+    background-color: #9a0526;
+    border-radius: 5px;
+    color: white;
+    font-weight: 100;
+    width: 100px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-left: 90%;
 }
 .image-product{
     width: 100%;
@@ -160,9 +166,11 @@ h2{
 
 /*-------------------MAIN PRODUCT DETAIL---------------*/
 .banner-detail{
+     margin: auto;
     border-radius: 10px;
-    width: 250px;
+    width: 300px;
     margin-bottom: 10px;
+   
 }
 .img-detail{
   
@@ -174,12 +182,13 @@ h2{
     align-self: center;
 }
 .p-detail{
-    margin: 20px;
-    text-align: justify;
+    margin: 30px;
+    text-align: justify
 }
 .product-detail{
     text-align: center;
     margin: 10px;
+    font-weight: bold;
 }
 .product-addcar{
     background-color: #9a0526;
@@ -192,6 +201,7 @@ h2{
 }
 .price-detail{
     color: #cb7169;
+    font-weight: bold;
 }
 /*-------------------/MAIN PRODUCT DETAIL---------------*/
 
@@ -206,10 +216,10 @@ footer{
     display: flex;
     justify-content: space-around;
 }
---------FOOTER---------------*/
+/*--------FOOTER---------------*/
 @media(min-width: 500px){
     .burguer-menu{
-        display:none;
+        display:none
     }
     .session-bar{
         display: flex;
