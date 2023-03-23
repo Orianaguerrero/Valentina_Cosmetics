@@ -143,6 +143,7 @@ main{
     margin-left: 90%;
 }
 .image-product{
+    height: 200px;
     width: 100%;
     margin: auto;
 }
@@ -259,10 +260,32 @@ footer{
         margin: 20px;
         margin-bottom: 0px;
     }
+
     .logo{
         margin-left: 20px;
     }
+    .products-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .home-product{
+        width: 40%;
+    }
+    main{
+        width: 90%;
+    }
+    .home-button{
+        margin-left: 80%;
+    }
+    .image-product{
+        max-width: 211px;
+    }
 }
 @media(min-width: 1000px) {
-    
+    .home-product{
+        width: 21%;
+        display: flex;
+        flex-direction: column;
+    }
 }
