@@ -91,7 +91,7 @@ main{
     align-self: center;
 }
 .login-title{
-    color: #cb7169;
+    color: #ffffff;
     margin: 10px 0px;
 }
 .login-input{
@@ -118,6 +118,7 @@ main{
 }
 .login-info{
     margin: 10px 0px;
+    
 }
 /*-------------------/MAIN LOGIN---------------*/
 
@@ -205,6 +206,17 @@ h2{
 }
 /*-------------------/MAIN PRODUCT DETAIL---------------*/
 
+/*------------------MAIN REGISTER---------------*/
+.perfil-register{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.texto-register{
+    font-weight: bold;
+}
+
+/*------------------/MAIN REGISTER---------------*/
 /*-------------------FOOTER---------------*/
 footer{
     background-color: #9a0526;

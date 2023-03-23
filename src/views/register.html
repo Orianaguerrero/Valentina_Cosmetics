@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Registro</title>
+</head>
+<body>
+    <header>
+        <div class="logo-session">
+          <img class="logo" src="./images/logo.png" alt="logo" />
+          <a class="burguer-menu" href="#"
+            ><em class="fa-solid fa-bars burguer-menu"></em
+          ></a>
+          <ul class="session-bar">
+            <li><a href="">Iniciar sesión</a></li>
+            <li><a href="">Registrarse</a></li>
+          </ul>
+        </div>
+        <div class="nav-bar">
+          <ul class="page">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Categorias</a></li>
+            <li><a href="">Más vendidos</a></li>
+            <li><a href="">Ofertas</a></li>
+          </ul>
+          <div class="search">
+            <input class="input-search" type="text" placeholder="Buscar..." />
+            <button class="search-button" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+
+        <h2 class="login-title">Registrarse</h2>
+
+        <form class="login-form" action="">
+
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" minlength="3" required class="login-input"> 
+        
+                <input type="email" name="email" id="email" placeholder="Direccion de correo electronico" class="login-input">
+                
+                <input type="password" name="password" id="password" placeholder="Contraseña" minlength="6" required class="login-input">
+             
+            <div>
+                <label class="texto-register" for="foto-perfil">Imagen de perfil</label>
+
+                <input class="perfil-register" type="file" name="foto-perfil" id="foto-perfil"  >
+            </div>
+                <button class="login-button" type="submit">Registrarse</button>
+        </form>
+      </main>
+      <footer>
+        <ul class="footer-bar">
+          <li>Redes sociales</li>
+          <li>Métodos de pago</li>
+        </ul>
+        <p style="text-align: center; margin-top: 10px;">2023 - Valentina Cosmetics</p>
+      </footer>
+</body>
+</html>
