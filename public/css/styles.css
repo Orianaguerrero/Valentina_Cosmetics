@@ -180,7 +180,7 @@ h2{
     padding: 10px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 5px;
-    width: 50%;
+    width: 200px;
     align-self: center;
 }
 .p-detail{
@@ -283,22 +283,21 @@ footer{
     }
     .banner-detail{
        width: 80%;
-}
-.main-product-detail{
+    }
+    .main-product-detail{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 20px;
 
-}
-.info-product-detail{
+    }
+    .info-product-detail{
     width: 40%;
-   
-}
-}
-.img-detail{
+    }
+    .img-detail{
     width: 40%;
-   
+    }
+
 }
 
 @media(min-width: 1000px) {
