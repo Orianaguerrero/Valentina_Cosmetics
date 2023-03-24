@@ -281,11 +281,53 @@ footer{
     .image-product{
         max-width: 211px;
     }
+    .banner-detail{
+       width: 80%;
 }
+.main-product-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+}
+.info-product-detail{
+    width: 40%;
+   
+}
+}
+.img-detail{
+    width: 40%;
+   
+}
+
 @media(min-width: 1000px) {
     .home-product{
         width: 21%;
         display: flex;
         flex-direction: column;
+    }
+    .info-product-detail{
+        max-width: 300px;
+    }
+    .img-detail{
+        max-width: 300px;
+        width: 120%;
+        height: 140%;
+        margin-right: 9%;
+   
+   
+    }
+    .banner-detail{
+        max-width: 725px;
+        width: 70%;
+     
+    }
+    .main-product-detail{
+        max-width: 725px;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    
     }
 }
