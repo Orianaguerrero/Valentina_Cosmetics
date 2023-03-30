@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./css/styles.css" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          rel="stylesheet"
+        />
+        <title>Valentina Cosmetics</title>
+      </head>
+<body>
+    <header>
+        <div class="logo-session">
+          <img class="logo" src="./images/logo.png" alt="logo" />
+          <a class="cart-icon" href="/cart"
+              ><em class="fa-solid fa-cart-shopping"></em
+            ></a>
+          <a class="burguer-menu" href="#"
+            ><em class="fa-solid fa-bars burguer-menu"></em
+          ></a>
+          <ul class="session-bar">
+            <li><a href="/login">Iniciar sesión</a></li>
+            <li><a href="/register">Registrarse</a></li>
+          </ul>
+        </div>
+        <div class="nav-bar">
+          <ul class="page">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="">Categorias</a></li>
+            <li><a href="">Más vendidos</a></li>
+            <li><a href="">Ofertas</a></li>
+          </ul>
+          <div class="search">
+            <input class="input-search" type="text" placeholder="Buscar..." />
+            <button class="search-button" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="cart-main">
+            <div class="cart-resume">
+                <p class="cart-title">Resumen</p>
+                <div class="cart-resume-info">
+                    <div class="cart-subtotal">
+                        <p>Subtotal</p>
+                        <strong>$54,97</strong>
+                    </div>
+                    <div class="cart-shipment">
+                        <p>Envio</p>
+                        <strong>Gratis</strong>
+                    </div>
+                </div>
+                <div class="cart-resume-total">
+                    <div class="cart-total">
+                        <p>Total</p>
+                        <strong>$54,97</strong>
+                    </div>
+                    <button class="login-button" type="submit">Finalizar Compra</button>
+                </div>
+            </div>
+            <div class="cart">
+                <p class="cart-title">Mi Carrito</p>
+                <article class="cart-product">
+                    <img class="cart-product-image" src="/images/base-estee.jpg" alt="">
+                    <div class="cart-product-info">
+                        <strong>Base liquida estee lauder</strong>
+                        <p >$18,99</p>
+                        <div class="cart-product-buttons">
+                            <button class="cart-product-button">-</button>
+                            <p class="cart-product-quantity">1</p>
+                            <button class="cart-product-button">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="cart-product">
+                    <img class="cart-product-image" src="/images/maybelline-lash.webp" alt="">
+                    <div class="cart-product-info">
+                        <strong>Lash sensational máscara de pestañas sky high</strong>
+                        <p >$10,99</p>
+                        <div class="cart-product-buttons">
+                            <button class="cart-product-button">-</button>
+                            <p class="cart-product-quantity">1</p>
+                            <button class="cart-product-button">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="cart-product">
+                    <img class="cart-product-image" src="/images/chanel-labial.webp" alt="">
+                    <div class="cart-product-info">
+                        <strong>Labial rouge allure channel</strong>
+                        <p >$24,99</p>
+                        <div class="cart-product-buttons">
+                            <button class="cart-product-button">-</button>
+                            <p class="cart-product-quantity">1</p>
+                            <button class="cart-product-button">+</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+      </main>
+      <footer>
+        <ul class="footer-bar">
+          <li>Redes sociales</li>
+          <li>Métodos de pago</li>
+        </ul>
+        <p style="text-align: center; margin-top: 10px">
+          2023 - Valentina Cosmetics
+        </p>
+      </footer>
+</body>
+</html>

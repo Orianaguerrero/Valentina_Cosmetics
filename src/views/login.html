@@ -16,42 +16,47 @@
     <header>
       <div class="logo-session">
         <img class="logo" src="./images/logo.png" alt="logo" />
-        <a class="burguer-menu" href="#"
-            ><em class="fa-solid fa-bars burguer-menu"></em
+        <a class="cart-icon" href="/cart"
+            ><em class="fa-solid fa-cart-shopping"></em
           ></a>
+        <a class="burguer-menu" href="#"
+          ><em class="fa-solid fa-bars burguer-menu"></em
+        ></a>
         <ul class="session-bar">
-          <li><a href="">Iniciar sesión</a></li>
-          <li><a href="">Registrarse</a></li>
+          <li><a href="/login">Iniciar sesión</a></li>
+          <li><a href="/register">Registrarse</a></li>
         </ul>
       </div>
       <div class="nav-bar">
         <ul class="page">
-          <li><a href="">Inicio</a></li>
+          <li><a href="/">Inicio</a></li>
           <li><a href="">Categorias</a></li>
           <li><a href="">Más vendidos</a></li>
           <li><a href="">Ofertas</a></li>
         </ul>
         <div class="search">
           <input class="input-search" type="text" placeholder="Buscar..." />
-          <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button class="search-button" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
       </div>
     </header>
     <main>
-      <h2 class="login-title">Iniciar sesión</h2>
-      <form class="login-form" action="">
+      <div class="register-main">
+        <h2 class="cart-title">Iniciar sesión</h2>
+        <form class="login-form" action="">
           <input class="login-input" type="text" name="email" id="email" placeholder="Direccion de correo electronico">
           <input class="login-input" type="password" name="password" id="password" placeholder="Contraseña">
           <div class="remember-me">
             <input type="checkbox" name="remember-me" id="remember-me">
             <label for="remember-me">Recuerdame</label>
           </div>
-        </div>
         <button class="login-button" type="submit">INICIAR SESION</button>
         <a class="login-info" href="#" style="color:black">Has olvidado tu contraseña</a>
-        <a class="login-info" href="#" style="color: #cb7169">Registrarse</a>
-      </form>
-
+        <a class="login-info" href="/register" style="color: #cb7169">Registrarse</a>
+        </form>
+      </div>
     </main>
     <footer>
       <ul class="footer-bar">

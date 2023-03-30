@@ -9,7 +9,7 @@ body{
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background-color: #ebebeb
+    background-color: white
 }
 a{
     color: white;
@@ -29,10 +29,20 @@ header{
     justify-content: space-between;
 }
 .burguer-menu{
+    text-align: center;
     color: white;
-    font-size: 24px;
-    margin-right: 15px;
-    margin-top: 12px
+    font-size: 25px;
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+.cart-icon{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 10px;
 }
 .logo{
     width: 120px;
@@ -78,6 +88,7 @@ input{
 main{
     width: 70%;
     margin:auto;
+    margin-top: 0px;
     text-align: center;
     display:flex;
     flex-direction: column;
@@ -89,6 +100,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-self: center;
+    margin: auto;
 }
 .login-title{
     color: #ffffff;
@@ -100,6 +112,7 @@ main{
     align-self: center;
     height: 35px;
     border: solid 2px #cb7169;
+    transition: 400ms;
 }
 .login-button{
     width: 200px;
@@ -109,6 +122,11 @@ main{
     color: white;
     background-color: #cb7169;
     border: none;
+    border-radius: 5px;
+    transition: 400ms;
+}
+.login-button:hover{
+    background-color: #9a0526;
 }
 .remember-me{
     width: 260px;
@@ -130,7 +148,10 @@ main{
     border-radius: 5px;
     width: 100px;
     margin: auto;
-
+    transition: 500ms;
+}
+.price:hover{
+    background-color: #9a0526;
 }
 .home-button{
     background-color: #9a0526;
@@ -148,21 +169,30 @@ main{
     margin: auto;
 }
 h2{
-    background-color: #9a0526;
+    font-weight: bold;
     border-radius: 5px;
-    color: white;
-    font-weight: 100;
+    color:black;
+    font-size:25px;
     width: 230px;
     margin-bottom: 15px;
-    align-self: center;
     padding: 5px 0px;
+    
+
 }
 .home-product{
     margin: 20px;
     background-color: white;
     padding: 10px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 5px;
+    transition: 400ms;
+}
+.home-product:hover{
+    box-shadow: 2px 2px 10px #cb7169;
+}
+.products-section{
+    margin-bottom: 20px;
+    border-bottom: #a19f9f solid 1px;
+
 }
 /*-------------------/MAIN HOME---------------*/
 
@@ -208,21 +238,124 @@ h2{
 /*-------------------/MAIN PRODUCT DETAIL---------------*/
 
 /*------------------MAIN REGISTER---------------*/
+.register-main{
+    padding:10px;
+    box-shadow: 2px 2px 10px #cb7169;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+}
 .perfil-register{
-    width: 100%;
+    width: 40%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+p{
+    font-weight: bold;
+    font-size: 16px;
 }
 .texto-register{
     font-weight: bold;
 }
 
 /*------------------/MAIN REGISTER---------------*/
+/*------------------PRODUCT CART--------------*/
+.cart-main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart-resume{
+    width: 100%;
+}
+.cart-resume-info{
+    border-bottom: 1px solid #cb7169;
+    margin-bottom: 10px;
+    padding-bottom: 10px    ;
+}
+.cart-resume-total{
+    border-bottom: 1px solid #cb7169;
+    padding-bottom: 20px;
+}
+.cart-title{
+    font-size: 21px;
+    color: white;
+    background-color: #9a0526;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 8px 0px;
+    max-width: 200px;
+}
+.cart-subtotal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cart-shipment{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cart-total{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.cart-product{
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cb7169;
+    height: 150px;
+}
+.cart-product-image{
+    width: 40%;
+}
+.cart-product-info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60%;
+}
+.cart-product-buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom:0px;
+    width: 100px
+}
+.cart-product-button{
+    background-color: white;
+    font-size: 20px;
+    width: 30%;
+    border: none;
+    transition: 420ms;
+}
+.cart-product-button:hover{
+    color: white;
+    background-color: #cb7169;
+    border-radius: 5px;
+}
+.cart-product-quantity{
+    font-size: 18px;
+    border-right: 1px solid #cb7169;
+    border-left: 1px solid #cb7169;
+    padding: 0px 10px;
+}
+/*------------------/PRODUCT CART---------------*/
 /*-------------------FOOTER---------------*/
 footer{
     background-color: #9a0526;
     height: 80px;
     color: white;
+    margin-top: 20px;
 }
 .footer-bar{
     margin-top: 20px;
@@ -231,8 +364,13 @@ footer{
 }
 /*--------FOOTER---------------*/
 @media(min-width: 500px){
+    /*--------HEADER---------------*/
     .burguer-menu{
         display:none
+    }
+    .cart-icon{
+        margin-top: 23px;
+        margin-right: 0px;
     }
     .session-bar{
         display: flex;
@@ -264,6 +402,7 @@ footer{
     .logo{
         margin-left: 20px;
     }
+    /*--------/HEADER---------------*/
     .products-section{
         display: flex;
         flex-wrap: wrap;
@@ -297,7 +436,37 @@ footer{
     .img-detail{
     width: 40%;
     }
-
+    /*--------PRODUCT CART---------------*/
+    .cart-main{
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        max-width: 700px;
+        margin:auto;
+        margin-top: 0px;
+    }
+    .cart-resume{
+        width: 45%;
+        box-shadow: 2px 2px 10px #cb7169;
+        padding: 0px 10px ;
+        border-radius: 10px;
+        max-height: 220px;
+    }
+    .cart{
+        width: 45%;
+        box-shadow: 2px 2px 10px #cb7169;
+        padding: 0px 10px;
+        border-radius: 10px;
+    }
+    .cart-title{
+        max-width: 200px;
+    }
+    .cart-product-image{
+        max-height: 120px;
+    }
+    .cart-resume-total{
+        border-bottom: none;
+    }
+    /*--------/PRODUCT CART---------------*/
 }
 
 @media(min-width: 1000px) {
@@ -329,4 +498,17 @@ footer{
         margin-top: 50px;
     
     }
+    /*--------PRODUCT CART---------------*/
+    .cart-main{
+        max-width: 1200px;
+        margin: 0px;
+    }
+    .cart{
+        max-width: 300px;
+    }
+    .cart-resume{
+        max-width: 300px;
+        
+    }
+    /*--------/PRODUCT CART---------------*/
 }
