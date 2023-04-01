@@ -1,4 +1,5 @@
 const express = require('express');
+const { homedir, userInfo } = require('os');
 const app = express();
 const path = require('path');
 
@@ -7,8 +8,12 @@ app.use(express.static(publicPath));
 
 const port = process.env.PORT || 3030;
 app.listen(port, () => console.log(`Server online in http://localhost:${port}`));
-app.get('/', (req,res) => res.sendFile(path.join(__dirname, './views/home.html')))
-app.get('/login', (req, res) => res.sendFile(path.join(__dirname, './views/login.html')))
-app.get('/register', (req,res) => res.sendFile(path.join(__dirname, './views/register.html')))
-app.get('/detail', (req,res) => res.sendFile(path.join(__dirname, './views/product-detail.html')))
-app.get('/cart', (req,res) => res.sendFile(path.join(__dirname, './views/cart.html')))
+
+const homeRoutes = require('./routes/homeRoutes')
+const userRoutes = require('./routes/userRoutes')
+const productRoutes = require('./routes/productRoutes')
+
+
+app.use('/', homeRoutes);
+app.use('/users', userRoutes);
+app.use('/products', productRoutes);
