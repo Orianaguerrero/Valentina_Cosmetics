@@ -1,5 +1,5 @@
 const path = require('path')
 const homeController = {
-    home: (req,res) => res.sendFile(path.join(__dirname, '../views/home.html'))
+    home: (req,res) => res.render('home.ejs', {title: 'Inicio - Valentina Cosmetics'})
 }
 module.exports = homeController
