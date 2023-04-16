@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('../partials/head.ejs') %>
-<body>
-  <%- include('../partials/header.ejs') %>
-      <main>
-        <div class="register-main">
-          <h2 class="cart-title">Registrarse</h2>
-
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+      <div class="register-main">
+        <h2 class="cart-title">Registrarse</h2>
         <form class="login-form" action="">
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre y apellido"
+            minlength="3"
+            required
+            class="login-input"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Direccion de correo electronico"
+            class="login-input"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Contraseña"
+            minlength="6"
+            required
+            class="login-input"
+          />
 
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" minlength="3" required class="login-input"> 
-        
-                <input type="email" name="email" id="email" placeholder="Direccion de correo electronico" class="login-input">
-                
-                <input type="password" name="password" id="password" placeholder="Contraseña" minlength="6" required class="login-input">
-             
-            <div>
-              <p>Imagen de perfil</p>
-                <label class="texto-register" for="foto-perfil"></label>
+          <div>
+            <p>Imagen de perfil</p>
+            <label class="texto-register" for="foto-perfil"></label>
 
-                <input class="perfil-register" type="file" name="foto-perfil" id="foto-perfil"  >
-            </div>
-                <button class="login-button" type="submit">Registrarse</button>
+            <input
+              class="perfil-register"
+              type="file"
+              name="profile-picture"
+              id="profile-picture"
+            />
+          </div>
+          <button class="login-button" type="submit">Registrarse</button>
         </form>
-        </div>
-        
-      </main>
-      <%- include('../partials/footer.ejs') %>
-</body>
+      </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
 </html>

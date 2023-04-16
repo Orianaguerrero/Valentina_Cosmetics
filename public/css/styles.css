@@ -470,6 +470,12 @@ footer{
 }
 
 @media(min-width: 1000px) {
+    .register-main{
+        margin: 0px;
+        max-width: none;
+        width: 600px;
+        align-self: center;
+    }
     .home-product{
         width: 21%;
         display: flex;
