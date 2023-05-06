@@ -124,6 +124,7 @@ main{
     border: none;
     border-radius: 5px;
     transition: 400ms;
+    margin-top: 10px;
 }
 .login-button:hover{
     background-color: #9a0526;
