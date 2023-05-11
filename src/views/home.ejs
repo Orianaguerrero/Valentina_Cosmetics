@@ -4,117 +4,43 @@
   <body>
 <%- include('partials/header.ejs') %>
     <main>
+
       <h2>Nuevos productos</h2>
       <section class="products-section">
-        <article class="home-product">
-          <p>Lash sensational máscara de pestañas sky high</p>
-          <img
-            class="image-product"
-            src="./images/lash-maybelline.png"
-            alt="maybelline-lash"
-          />
-          <a class="price" href="products/detail">$10.99 COMPRAR</a>
-        </article>
-
-        <article class="home-product">
-          <p>Perfect blush too faced</p>
-          <img class="image-product" src="./images/foofaced-blush.jpg" alt="toofaced-blush" />
-          <a class="price" href="products/detail">$8.99 COMPRAR</a>
-        </article>
-
-        <article class="home-product">
-          <p>Base liquida ifallible l´oreal</p>
-          <img
-            class="image-product"
-            src="./images/loreal-base.jpg"
-            alt="base-loreal"
-          />
-          <a class="price" href="products/detail">$25.99 COMPRAR</a>
-        </article>
-
-        <article class="home-product">
-          <p>Polvo compacto doble uso divine L´bel</p>
-          <img
-            class="image-product"
-            src="./images/lbel-polvocompacto.jpg"
-            alt="polvo-loreal"
-          />
-          <a class="price" href="products/detail">$11.99 COMPRAR</a>
-        </article>
+        <% products.forEach(product => { %>
+        <% if (product.category == "on-sale") { %>
+          
+            <article class="home-product">
+              <p><%= product.name %></p>
+              <img
+                class="image-product"
+                src="./images/<%= product.image %>"
+                alt="Imagen del producto"
+              />
+              <a class="price" href="products/detail/<%= product.id %>"> <%= product.price %> COMPRAR</a>
+            </article>
+        <% } %>
+        <% }) %>
       </section>
-     
-
+      
       <h2>Productos mas vendidos</h2>
-
       <section class="products-section">
-        <article class="home-product">
-          <p>Labial rouge allure channel</p>
-          <img
-            class="image-product"
-            src="./images/chanel-labial.webp"
-            alt="labial-chanel"
-          />
-          <a class="price" href="products/detail">$24.99 COMPRAR</a>
-        </article>
-
-        <article class="home-product">
-          <p>Benetint benefit</p>
-          <img class="image-product" src="./images/benefit-tint.jpg" alt="benefit-tint" />
-          <a class="price" href="products/detail">$4.99 COMPRAR</a>
-        </article>
-
-        <article class="home-product">
-          <p>Corrector de ojeras too faced</p>
-          <img
-            class="image-product"
-            src="./images/toofaced-corrector.png"
-            alt="corrector-toofaced"
-          />
-          <a class="price" href="products/detail">$30.99 COMPRAR</a>
-        </article>
-
-        <article class="home-product">
-          <p>Delineador liquido matte nyx</p>
-          <img class="image-product" src="./images/nyx-delineador.jpg" alt="nyx Delineador" />
-          <a class="price" href="products/detail">$4.99 COMPRAR</a>
-        </article>
-
-      </section>
+          <% products.forEach(product => { %>
+           <% if (product.category == "new") { %>
+            
+              <article class="home-product">
+                <p><%= product.name %></p>
+                <img
+                  class="image-product"
+                  src="./images/<%= product.image %>"
+                  alt="Imagen del producto"
+                />
+                <a class="price" href="products/detail/<%= product.id %>"> <%= product.price %> COMPRAR</a>
+              </article>
+           <% } %>
+          <% }) %>
+            </section>
      
-
-      <h2>Ofertas</h2>
-      <section class="products-section">
-        <article class="home-product">
-          <p>Mate lip kit kylie jenner</p>
-          <img
-            class="image-product"
-            src="./images/kylie-labial.png"
-            alt="kit lip kylie"
-          />
-          <a class="price" href="products/detail">$12.99 COMPRAR</a>
-        </article>
-
-        <article class="home-product">
-          <p>Base liquida estee lauder</p>
-          <img
-            class="image-product"
-            src="./images/base-estee.jpg"
-            alt="base-estee"
-          />
-          <a class="price" href="products/detail">$18.99 COMPRAR</a>
-        </article>
-
-        <article class="home-product">
-          <p>Corrector esika pro</p>
-          <img
-            class="image-product"
-            src="./images/esika-corrector.jpg"
-            alt="corrector-esika"
-          />
-          <a class="price" href="products/detail">$8.99 COMPRAR</a>
-        </article>
-      </section>
-
     </main>
     <%- include('partials/footer.ejs') %>
   </body>
