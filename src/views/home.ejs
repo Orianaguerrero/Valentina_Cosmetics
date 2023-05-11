@@ -5,7 +5,7 @@
 <%- include('partials/header.ejs') %>
     <main>
 
-      <h2>Nuevos productos</h2>
+      <h2 class="title">Nuevos productos</h2>
       <section class="products-section">
         <% products.forEach(product => { %>
         <% if (product.category == "on-sale") { %>
@@ -23,7 +23,7 @@
         <% }) %>
       </section>
       
-      <h2>Productos mas vendidos</h2>
+      <h2 class="title">Productos mas vendidos</h2>
       <section class="products-section">
           <% products.forEach(product => { %>
            <% if (product.category == "new") { %>

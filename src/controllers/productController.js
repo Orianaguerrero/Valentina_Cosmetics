@@ -8,13 +8,22 @@ const productController = {
     detail: (req,res) => {
         let product = products.filter(product => product.id == req.params.id)
         let productFound = product.pop()
-        res.render('products/product-detail.ejs', {title: 'Detalle del producto',product : productFound})
+        res.render('products/product-detail.ejs', {title: 'Detalle del producto',product: productFound})
     },
-    
+    news: (req, res) => {
+        res.render('products/new-products.ejs', {title: 'Nuevos Productos', products: products})
+    },  
+    offers: (req, res) => {
+        res.render('products/offers-products.ejs', {title: 'Ofertas', products: products})
+    },
     cart: (req,res) => res.render('products/cart.ejs', {title: 'Carrito'}),
 
-    new: (req,res) => res.render('products/product-new.ejs', {title: 'Nuevo producto'}),
+    create: (req,res) => res.render('products/product-new.ejs', {title: 'Nuevo producto'}),
 
-    edit: (req,res) => res.render('products/product-edit.ejs', {title: 'Editar Producto'})
+    edit: (req,res) => {
+        let product = products.filter(product => product.id == req.params.id)
+        let productFound = product.pop()
+        res.render('products/product-edit.ejs', {title: 'Editar Producto', product: productFound})
+    }
 }
 module.exports = productController

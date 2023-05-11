@@ -94,6 +94,9 @@ main{
     flex-direction: column;
     justify-content: center;
 }
+.title{
+    margin: auto;
+}
 .login-form{
     width: 80%;
     display:flex;

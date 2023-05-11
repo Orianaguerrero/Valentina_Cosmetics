@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
@@ -7,18 +7,20 @@
         <div class="register-main">
         <h2 class="cart-title">Editar producto</h2>
         <form class="login-form" action="">
-            <input class="login-input" type="text" name="name" id="name" placeholder="Nombre del producto">
-            <input class="login-input" type="text" name="description" id="description" placeholder="Descripción">
+            <input class="login-input" type="text" name="name" id="name" value="<%= product.name %>">
+            
+            <label class="texto-register" for="description">Descripción</label>
+            <textarea class="login-input" type="textarea" name="description" id="description" cols="10" rows="5">
+                <%= product.description %>
+            </textarea>
 
             <label class="texto-register" for="product-image">Imagen del producto</label>
             <input class="login-input" type="file" name="product-image" id="product-image">
             
             <label class="texto-register" for="category">Categoria </label>
             <select class="login-input" name="category" id="category">
-                <option value="facial">Rostro</option> 
-                <option value="eyes">Ojos</option>
-                <option value="lips">Labios</option>
-                <option value="eyebrows">Cejas</option>
+                <option value="new">Nuevo</option> 
+                <option value="on-sale">Oferta</option>
             </select>
             
             <label class="texto-register" for="brand">Marca </label>
@@ -34,7 +36,7 @@
                 <option value="esika">Esika</option>
                 <option value="esteelauder">Estee Lauder</option>
             </select>
-            <input class="login-input" type="number" name="price" id="price" placeholder="Precio">
+            <input class="login-input" type="number" name="price" id="price" value="<%= product.price %>">
             
             <button class="login-button" type="submit">Editar</button>
             
