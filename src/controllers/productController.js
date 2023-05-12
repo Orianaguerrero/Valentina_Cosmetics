@@ -1,10 +1,10 @@
 const path = require('path')
 const fs = require('fs');
+
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
-    
     detail: (req,res) => {
         let product = products.filter(product => product.id == req.params.id)
         let productFound = product.pop()
@@ -18,8 +18,23 @@ const productController = {
     },
     cart: (req,res) => res.render('products/cart.ejs', {title: 'Carrito'}),
 
-    create: (req,res) => res.render('products/product-new.ejs', {title: 'Nuevo producto'}),
-
+    createView: (req,res) => {
+        res.render('products/product-new.ejs', {title: 'Nuevo producto'})
+    },
+    create: (req, res) => {
+        let newProduct = {
+            id: products.length + 1,
+            name: req.body.name,
+            description: req.body.description,
+            image: req.file ? req.file.filename : 'logo.png',
+            category: req.body.category,
+            price: req.body.price
+        }
+        products.push(newProduct)
+        let productsJson = JSON.stringify(products, null, 2)
+		fs.writeFileSync(productsFilePath, productsJson, 'utf-8')
+        res.redirect('/')
+    },
     edit: (req,res) => {
         let product = products.filter(product => product.id == req.params.id)
         let productFound = product.pop()

@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs') %>
+  <%- include('partials/head.ejs') %>
   <body>
-<%- include('partials/header.ejs') %>
+    <%- include('partials/header.ejs') %>
     <main>
-
       <h2 class="title">Nuevos productos</h2>
       <section class="products-section">
         <% products.forEach(product => { %>
-        <% if (product.category == "on-sale") { %>
-          
+          <% if (product.category == "on-sale") { %>
             <article class="home-product">
               <p><%= product.name %></p>
               <img
-                class="image-product"
-                src="./images/<%= product.image %>"
-                alt="Imagen del producto"
+              class="image-product"
+              src="./images/<%= product.image %>"
+              alt="Imagen del producto"
               />
               <a class="price" href="products/detail/<%= product.id %>"> <%= product.price %> COMPRAR</a>
             </article>
-        <% } %>
+          <% } %>
         <% }) %>
       </section>
-      
       <h2 class="title">Productos mas vendidos</h2>
       <section class="products-section">
-          <% products.forEach(product => { %>
-           <% if (product.category == "new") { %>
-            
-              <article class="home-product">
-                <p><%= product.name %></p>
-                <img
-                  class="image-product"
-                  src="./images/<%= product.image %>"
-                  alt="Imagen del producto"
-                />
-                <a class="price" href="products/detail/<%= product.id %>"> <%= product.price %> COMPRAR</a>
-              </article>
-           <% } %>
-          <% }) %>
-            </section>
-     
+        <% products.forEach(product => { %>
+          <% if (product.category == "new") { %>
+            <article class="home-product">
+              <p><%= product.name %></p>
+              <img
+              class="image-product"
+              src="./images/products/<%= product.image %>"
+              alt="Imagen del producto"
+              />
+              <a class="price" href="products/detail/<%= product.id %>"> <%= product.price %> COMPRAR</a>
+            </article>
+          <% } %>
+        <% }) %>
+      </section>
     </main>
     <%- include('partials/footer.ejs') %>
   </body>

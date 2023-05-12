@@ -4,41 +4,39 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-        <div class="register-main">
-            <h2 class="cart-title">Agregar un producto</h2>
-            <form class="login-form" action="">
-                <input class="login-input" type="text" name="name" id="name" placeholder="Nombre del producto">
-                <input class="login-input" type="text" name="description" id="description" placeholder="Descripción">
+      <div class="register-main">
+        <h2 class="cart-title">Agregar un producto</h2>
+        <form class="login-form" method="post" action="/products/create" enctype="multipart/form-data">
+          <input class="login-input" type="text" name="name" id="name" placeholder="Nombre del producto">
+          <input class="login-input" type="text" name="description" id="description" placeholder="Descripción">
 
-                <label class="texto-register" for="product-image">Imagen del producto</label>
-                <input class="login-input" type="file" name="product-image" id="product-image">
+          <label class="texto-register" for="image">Imagen del producto</label>
+          <input class="login-input" type="file" name="image" id="image">
                 
-                <label class="texto-register" for="category">Categoria </label>
-                <select class="login-input" name="category" id="category">
-                    <option value="facial">Rostro</option> 
-                    <option value="eyes">Ojos</option>
-                    <option value="lips">Labios</option>
-                    <option value="eyebrows">Cejas</option>
-                </select>
+          <label class="texto-register" for="category">Categoria </label>
+          <select class="login-input" name="category" id="category">
+            <option value="on-sale">Oferta</option> 
+            <option value="new">Nuevo</option>
+          </select>
                 
-                <label class="texto-register" for="brand">Marca </label>
-                <select class="login-input" name="brand" id="brand">
-                    <option value="maybelline">Maybelline</option>
-                    <option value="kylie">Kylie Cosmetics</option>
-                    <option value="toofaced">Too Faced</option>
-                    <option value="loreal">L'oreal</option>
-                    <option value="lbel">L'bel</option>
-                    <option value="channel">Channel</option>
-                    <option value="nyx">Nyx</option>
-                    <option value="benefit">Benefit</option>
-                    <option value="esika">Esika</option>
-                    <option value="esteelauder">Estee Lauder</option>
-                </select>
-                <input class="login-input" type="number" name="price" id="price" placeholder="Precio">
-                
-                <button class="login-button" type="submit">Agregar</button>
-        </div>
-            
+          <label class="texto-register" for="brand">Marca </label>
+          <select class="login-input" name="brand" id="brand">
+            <option value="maybelline">Maybelline</option>
+            <option value="kylie">Kylie Cosmetics</option>
+            <option value="toofaced">Too Faced</option>
+            <option value="loreal">L'oreal</option>
+            <option value="lbel">L'bel</option>
+            <option value="channel">Channel</option>
+            <option value="nyx">Nyx</option>
+            <option value="benefit">Benefit</option>
+            <option value="esika">Esika</option>
+            <option value="esteelauder">Estee Lauder</option>
+          </select>
+
+          <input class="login-input" type="number" name="price" id="price" placeholder="Precio"> 
+          <button class="login-button" type="submit">Agregar</button>
+        </form>
+      </div>   
     </main>
     <%- include('../partials/footer.ejs') %>
   </body>
