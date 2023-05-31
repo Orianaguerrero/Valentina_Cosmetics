@@ -5,6 +5,9 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
+    all: (req,res) => {
+        res.render('products/all-products.ejs', {title: 'Todos los productos', products: products})
+    },
     detail: (req,res) => {
         let product = products.filter(product => product.id == req.params.id)
         let productFound = product.pop()
@@ -39,6 +42,23 @@ const productController = {
         let product = products.filter(product => product.id == req.params.id)
         let productFound = product.pop()
         res.render('products/product-edit.ejs', {title: 'Editar Producto', product: productFound})
+    },
+    update: (req,res) => {
+        let id = req.params.id
+        let product = products.filter(product => product.id == req.params.id)
+        let productUpdated = {
+            id: parseInt(id),
+            name: req.body.name,
+            description: req.body.description,
+            image: req.file ? req.file.filename : product.image,
+            category: req.body.category,
+            price: req.body.price
+        }
+        let newProducts = products.filter(product => product.id != id)
+        newProducts.push(productUpdated)
+        let productsJson = JSON.stringify(newProducts, null, 2)
+        fs.writeFileSync(productsFilePath, productsJson, 'utf-8')
+        res.redirect(`/products/detail/${id}`)
     }
 }
 module.exports = productController

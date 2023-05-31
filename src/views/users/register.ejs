@@ -6,16 +6,23 @@
     <main>
       <div class="register-main">
         <h2 class="cart-title">Registrarse</h2>
-        <form class="login-form" action="">
+        <form class="login-form" method="post" action="/users/register" enctype="multipart/form-data">
           <input
             type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="Nombre y apellido"
+            name="name"
+            id="name"
+            placeholder="Nombre"
             minlength="3"
             required
             class="login-input"
           />
+          <input type="	text"
+            name="lastName"
+            id=" lastName"
+            placeholder="Apellido"
+            minlength="4"
+            required
+            class="login-input">
           <input
             type="email"
             name="email"
@@ -40,8 +47,8 @@
             <input
               class="perfil-register"
               type="file"
-              name="profile-picture"
-              id="profile-picture"
+              name="filename"
+              id="filename"
             />
           </div>
           <button class="login-button" type="submit">Registrarse</button>

@@ -2,9 +2,11 @@ const express = require('express');
 const { homedir, userInfo } = require('os');
 const app = express();
 const path = require('path');   
+const methodOverride =  require('method-override');
 
 const publicPath = path.resolve(__dirname,'../public');
 app.use(express.static(publicPath));
+app.use(methodOverride('_method'));
 
 const port = process.env.PORT || 3030;
 app.listen(port, () => console.log(`Server online in http://localhost:${port}`));

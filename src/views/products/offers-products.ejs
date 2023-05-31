@@ -10,7 +10,7 @@
                     <% if (product.category == "on-sale") { %>
                         <article class="home-product">
                             <p><%= product.name %></p>
-                            <img class="image-product" src="/images/<%= product.image %>" alt="Imagen del producto"/>
+                            <img class="image-product" src="/images/products/<%= product.image %>" alt="Imagen del producto"/>
                             <a class="price" href="/products/detail/<%= product.id %>"> <%= product.price %> COMPRAR</a>
                         </article>
                     <% } %>

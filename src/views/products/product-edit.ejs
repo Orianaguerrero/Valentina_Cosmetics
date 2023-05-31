@@ -5,43 +5,43 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <div class="register-main">
-        <h2 class="cart-title">Editar producto</h2>
-        <form class="login-form" action="">
-            <input class="login-input" type="text" name="name" id="name" value="<%= product.name %>">
-            
-            <label class="texto-register" for="description">Descripción</label>
-            <textarea class="login-input" type="textarea" name="description" id="description" cols="10" rows="5">
-                <%= product.description %>
-            </textarea>
+            <h2 class="cart-title">Editar producto</h2>
+            <form class="login-form" action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <input class="login-input" type="text" name="name" id="name" value="<%= product.name %>">
 
-            <label class="texto-register" for="product-image">Imagen del producto</label>
-            <input class="login-input" type="file" name="product-image" id="product-image">
+                <label class="texto-register" for="description">Descripción</label>
+                <textarea class="login-input" type="textarea" name="description" id="description" cols="10" rows="5">
+                <%= product.description %>
+                </textarea>
+
+                <label class="texto-register" for="image">Imagen del producto</label>
+                <input class="login-input" type="file" name="image" id="product-image">
             
-            <label class="texto-register" for="category">Categoria </label>
-            <select class="login-input" name="category" id="category">
-                <option value="new">Nuevo</option> 
-                <option value="on-sale">Oferta</option>
-            </select>
+                <label class="texto-register" for="category">Categoria </label>
+                <select class="login-input" name="category" id="category">
+                    <option value="new">Nuevo</option> 
+                    <option value="on-sale">Oferta</option>
+                </select>
             
-            <label class="texto-register" for="brand">Marca </label>
-            <select class="login-input" name="brand" id="brand">
-                <option value="maybelline">Maybelline</option>
-                <option value="kylie">Kylie Cosmetics</option>
-                <option value="toofaced">Too Faced</option>
-                <option value="loreal">L'oreal</option>
-                <option value="lbel">L'bel</option>
-                <option value="channel">Channel</option>
-                <option value="nyx">Nyx</option>
-                <option value="benefit">Benefit</option>
-                <option value="esika">Esika</option>
-                <option value="esteelauder">Estee Lauder</option>
-            </select>
-            <label class="texto-register" for="price">Precio</label>
-            <input class="login-input" type="number" name="price" id="price" value="<%= product.price %>">
-            
-            <button class="login-button" type="submit">Editar</button>
-            
-            <button class="login-button" type="submit">Borrar</button>
+                <label class="texto-register" for="brand">Marca </label>
+                <select class="login-input" name="brand" id="brand">
+                    <option value="maybelline">Maybelline</option>
+                    <option value="kylie">Kylie Cosmetics</option>
+                    <option value="toofaced">Too Faced</option>
+                    <option value="loreal">L'oreal</option>
+                    <option value="lbel">L'bel</option>
+                    <option value="channel">Channel</option>
+                    <option value="nyx">Nyx</option>
+                    <option value="benefit">Benefit</option>
+                    <option value="esika">Esika</option>
+                    <option value="esteelauder">Estee Lauder</option>
+                </select>
+                <label class="texto-register" for="price">Precio</label>
+                <input class="login-input" type="number" name="price" id="price" value="<%= product.price %>">
+                
+                <button class="login-button" type="submit">Editar</button>
+                <button class="login-button" type="submit">Borrar</button>
+            </form>
         </div>
     </main>
     <%- include('../partials/footer.ejs') %>
