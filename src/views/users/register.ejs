@@ -7,39 +7,49 @@
       <div class="register-main">
         <h2 class="cart-title">Registrarse</h2>
         <form class="login-form" method="post" action="/users/register" enctype="multipart/form-data">
+
+          <% if (locals.errors && errors.name ) { %>
+            <p class="text-danger"> <%= errors.name.msg %></p>
+          <% } %>
           <input
+            class="login-input"
             type="text"
             name="name"
             id="name"
             placeholder="Nombre"
-            minlength="3"
-            required
-            class="login-input"
+            value="<%= locals.oldData ? oldData.name : null %>"
           />
+          <% if (locals.errors && errors.lastName ) { %>
+            <p class="text-danger"> <%= errors.lastName.msg %></p>
+          <% } %>
           <input type="	text"
             name="lastName"
             id=" lastName"
             placeholder="Apellido"
-            minlength="4"
-            required
-            class="login-input">
+            class="login-input"
+            value="<%= locals.oldData ? oldData.lastName : null %>"
+          >
+          <% if (locals.errors && errors.email ) { %>
+            <p class="text-danger"> <%= errors.email.msg %></p>
+          <% } %>
           <input
-            type="email"
+            type="text"
             name="email"
             id="email"
             placeholder="Direccion de correo electronico"
             class="login-input"
+            value="<%=locals.oldData ? oldData.email : null %>"
           />
+          <% if (locals.errors && errors.password ) { %>
+            <p class="text-danger"> <%= errors.password.msg %></p>
+          <% } %>
           <input
             type="password"
             name="password"
             id="password"
             placeholder="Contraseña"
-            minlength="6"
-            required
             class="login-input"
           />
-
           <div>
             <p>Imagen de perfil</p>
             <label class="texto-register" for="foto-perfil"></label>

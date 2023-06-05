@@ -6,16 +6,35 @@
     <main>
       <div class="register-main">
         <h2 class="cart-title">Iniciar sesión</h2>
-        <form class="login-form" action="">
-          <input class="login-input" type="text" name="email" id="email" placeholder="Direccion de correo electronico">
-          <input class="login-input" type="password" name="password" id="password" placeholder="Contraseña">
+        <form class="login-form" action="/users/login" method="post">
+          <% if (locals.errors && errors.email ) { %>
+            <p class="text-danger"> <%= errors.email.msg %></p>
+          <% } %>
+          <input class="login-input" 
+            type="text" 
+            name="email" 
+            id="email" 
+            placeholder="Direccion de correo electronico"
+          >
+          <% if (locals.errors && errors.password ) { %>
+            <p class="text-danger"> <%= errors.password.msg %></p>
+          <% } %>
+          <input class="login-input" 
+            type="password" 
+            name="password" 
+            id="password" 
+            placeholder="Contraseña"
+          >
+
           <div class="remember-me">
             <input type="checkbox" name="remember-me" id="remember-me">
             <label for="remember-me">Recuerdame</label>
           </div>
-        <button class="login-button" type="submit">INICIAR SESION</button>
-        <a class="login-info" href="#" style="color:black">Has olvidado tu contraseña</a>
-        <a class="login-info" href="/register" style="color: #cb7169">Registrarse</a>
+
+          <button class="login-button" type="submit">INICIAR SESION</button>
+          <a class="login-info" href="#" style="color:black">Has olvidado tu contraseña</a>
+          <a class="login-info" href="/register" style="color: #cb7169">Registrarse</a>
+          
         </form>
       </div>
     </main>

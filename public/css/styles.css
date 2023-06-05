@@ -261,6 +261,10 @@ p{
 .texto-register{
     font-weight: bold;
 }
+.text-danger{
+    color: red; 
+    font-weight:bolder
+}
 
 /*------------------/MAIN REGISTER---------------*/
 /*------------------PRODUCT CART--------------*/

@@ -1,46 +1,10 @@
 [
   {
     "id": 1,
-    "name": "oriana",
-    "lastName": "guerrero",
-    "email": "valentina12@gmail.com",
-    "password": "1234",
-    "category": "administrador",
-    "image": "profile-oriana.jpg"
-  },
-  {
-    "id": 2,
-    "name": "felipe",
-    "lastName": "mendez",
-    "email": "felipe2002@gmail.com",
-    "password": "12345",
-    "category": "administrador",
-    "image": "profile-felipe.jpg"
-  },
-  {
-    "id": 3,
-    "name": "Oriana ",
-    "lastName": "Guerrero",
-    "email": "oriana@gmail.com",
-    "password": "123456",
-    "category": "user",
-    "image": "1685502223166.jpg"
-  },
-  {
-    "id": 4,
-    "name": "kitty",
-    "lastName": "santiago",
-    "email": "kitty@gmail.com",
-    "password": "123789",
-    "category": "user",
-    "image": "logo.png"
-  },
-  {
-    "id": 5,
-    "name": "antonella",
-    "lastName": "araque",
-    "email": "anto@gmail.com",
-    "password": "$2b$10$r0EZhcw1HhHL1F00ZOXp/usH7ixZQl8iOeCnsFbVDkgSedXPaaBI2",
+    "name": "Ove del Carmen",
+    "lastName": "Nava",
+    "email": "ubencita@yahoo.com",
+    "password": "$2b$10$U1NYZUtIEnyFiWh6MCCeiukI9BryexqSh7fCoy7GS2X52g/zYj/fC",
     "category": "user",
     "image": "logo.png"
   }
