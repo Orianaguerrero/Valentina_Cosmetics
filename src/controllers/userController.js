@@ -24,6 +24,9 @@ const userController = {
                 let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
                 if (isOkPassword){
                     req.session.userLogged = userToLogin
+                    if (req.body.rememberMe){
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
+                    }
                     return res.redirect('/users/profile')
                 }
             }
@@ -73,6 +76,7 @@ const userController = {
     })
     },
     logout: (req,res) => {
+        res.clearCookie('userEmail') 
          req.session.destroy();
          return res.redirect('/')
     }
