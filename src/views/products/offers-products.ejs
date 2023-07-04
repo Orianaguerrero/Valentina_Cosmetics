@@ -7,7 +7,7 @@
             <h2 class="title">Ofertas</h2>
             <section class="products-section">
                 <% products.forEach(product => { %>
-                    <% if (product.category == "on-sale") { %>
+                    <% if (product.id_section == "3") { %>
                         <article class="home-product">
                             <p><%= product.name %></p>
                             <img class="image-product" src="/images/products/<%= product.image %>" alt="Imagen del producto"/>

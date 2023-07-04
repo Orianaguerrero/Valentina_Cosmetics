@@ -1,64 +1,80 @@
 const path = require('path')
-const fs = require('fs');
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 const productController = {
-    all: (req,res) => {
-        res.render('products/all-products.ejs', {title: 'Todos los productos', products: products})
+    all: async (req,res) => {
+        const products = await db.Product.findAll()
+        res.render('products/all-products.ejs', {title: 'Todos los productos', products})
+    }, 
+
+    detail: async (req,res) => {
+        const product = await db.Product.findByPk(req.params.id)
+        res.render('products/product-detail.ejs', {title: 'Detalle del producto',product: product})
     },
-    detail: (req,res) => {
-        let product = products.filter(product => product.id == req.params.id)
-        let productFound = product.pop()
-        res.render('products/product-detail.ejs', {title: 'Detalle del producto',product: productFound})
-    },
-    news: (req, res) => {
+    news:async (req, res) => {
+        const products = await db.Product.findAll({
+            where: {
+                id_section: 4
+            },
+            order: [
+                ['create_time', 'DESC']
+            ],
+        })
         res.render('products/new-products.ejs', {title: 'Nuevos Productos', products: products})
     },  
-    offers: (req, res) => {
-        res.render('products/offers-products.ejs', {title: 'Ofertas', products: products})
+    offers: async (req, res) => {
+        const products = await db.Product.findAll({
+            where: {
+                id_section: 3
+            },
+            order: [
+                ['create_time', 'DESC']
+            ],
+        })
+        res.render('products/offers-products.ejs', {title: 'Ofertas', products})
     },
     cart: (req,res) => res.render('products/cart.ejs', {title: 'Carrito'}),
 
     createView: (req,res) => {
         res.render('products/product-new.ejs', {title: 'Nuevo producto'})
     },
-    create: (req, res) => {
-        let newProduct = {
-            id: products.length + 1,
+    create:async (req, res) => {
+        await db.Product.create ({
             name: req.body.name,
             description: req.body.description,
             image: req.file ? req.file.filename : 'logo.png',
-            category: req.body.category,
+            id_section: req.body.id_section,
             price: req.body.price
-        }
-        products.push(newProduct)
-        let productsJson = JSON.stringify(products, null, 2)
-		fs.writeFileSync(productsFilePath, productsJson, 'utf-8')
+        })
         res.redirect('/')
     },
-    edit: (req,res) => {
-        let product = products.filter(product => product.id == req.params.id)
-        let productFound = product.pop()
-        res.render('products/product-edit.ejs', {title: 'Editar Producto', product: productFound})
+    edit: async (req,res) => {
+        const product= await db.Product.findByPk(req.params.id)
+        res.render('products/product-edit.ejs', {title: 'Editar Producto', product})
     },
-    update: (req,res) => {
-        let id = req.params.id
-        let product = products.filter(product => product.id == req.params.id)
-        let productUpdated = {
-            id: parseInt(id),
+    update: async (req,res) => {
+        let oldProduct = await db.Product.findByPk(req.params.id)
+        await db.Product.update({
             name: req.body.name,
             description: req.body.description,
-            image: req.file ? req.file.filename : product.image,
-            category: req.body.category,
-            price: req.body.price
-        }
-        let newProducts = products.filter(product => product.id != id)
-        newProducts.push(productUpdated)
-        let productsJson = JSON.stringify(newProducts, null, 2)
-        fs.writeFileSync(productsFilePath, productsJson, 'utf-8')
-        res.redirect(`/products/detail/${id}`)
-    }
+            image: req.file ? req.file.filename : oldProduct.image,
+            id_section: req.body.id_section,
+            price: parseFloat(req.body.price)
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect(`/products/detail/${req.params.id}`)
+    },
+    delete: async (req, res) => {
+        await db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/products/all')
+    },
 }
 module.exports = productController

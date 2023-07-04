@@ -25,5 +25,5 @@ router.post('/create', upload.single('image'), productController.create)
 
 router.get('/edit/:id', productController.edit)
 router.put('/edit/:id', upload.single('image'), productController.update)
-
+router.delete('/delete/:id', productController.delete)
 module.exports = router

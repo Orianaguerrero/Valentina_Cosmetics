@@ -17,10 +17,10 @@
                 <label class="texto-register" for="image">Imagen del producto</label>
                 <input class="login-input" type="file" name="image" id="product-image">
             
-                <label class="texto-register" for="category">Categoria </label>
-                <select class="login-input" name="category" id="category">
-                    <option value="new">Nuevo</option> 
-                    <option value="on-sale">Oferta</option>
+                <label class="texto-register" for="id_section">Categoria </label>
+                <select class="login-input" name="id_section" id="id_section">
+                    <option value="4">Nuevo</option> 
+                    <option value="3">Oferta</option>
                 </select>
             
                 <label class="texto-register" for="brand">Marca </label>
@@ -37,9 +37,11 @@
                     <option value="esteelauder">Estee Lauder</option>
                 </select>
                 <label class="texto-register" for="price">Precio</label>
-                <input class="login-input" type="number" name="price" id="price" value="<%= product.price %>">
+                <input class="login-input" type="text" name="price" id="price" value="<%= product.price %>">
                 
                 <button class="login-button" type="submit">Editar</button>
+            </form>
+            <form action="/products/delete/<%=product.id%>?_method=DELETE" method="post">
                 <button class="login-button" type="submit">Borrar</button>
             </form>
         </div>

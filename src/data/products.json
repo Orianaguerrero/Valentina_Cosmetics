@@ -46,21 +46,5 @@
     "image": "benefit-tint.jpg",
     "category": "new",
     "price": 4.99
-  },
-  {
-    "id": 7,
-    "name": "Rengoku",
-    "description": "Pilar de Fuego\r\n                ",
-    "image": "1684104058699.jpg",
-    "category": "new",
-    "price": "666"
-  },
-  {
-    "id": 8,
-    "name": "Aceite para barba larga",
-    "description": "Cuida y domina tu barba con el Aceite para Barba Larga de Barber Club, enriquecido con Aceite Esencial de Madera de Cedro para conseguir una barba nutrida y disciplinada ",
-    "image": "1684104408674.png",
-    "category": "on-sale",
-    "price": "123"
   }
 ]

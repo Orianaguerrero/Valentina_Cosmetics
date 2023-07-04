@@ -7,7 +7,7 @@
             <h2 class="title">Nuevos productos</h2>
             <section class="products-section">
                 <% products.forEach(product => { %>
-                    <% if (product.category == "new") { %>
+                    <% if (product.id_section == 4) { %>
                         <article class="home-product">
                             <p><%= product.name %></p>
                             <img class="image-product" src="/images/products/<%= product.image %>" alt="Imagen del producto"/>
